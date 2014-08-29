@@ -1,0 +1,10 @@
+{% extends './layout.html' %}
+{% block title %}{{ page.title }} | Siedrix.com{% endblock %}
+
+{% block content %}
+	<div class="post-single">
+		<div>{% autoescape false %}
+			{{ page.content }}
+		{% endautoescape %}</div>
+	</div>
+{% endblock %}
