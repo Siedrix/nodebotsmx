@@ -7,6 +7,23 @@ body {
 
 a { text-decoration: none; color:rgb(180,30,30);}
 
+.main-nav {
+  background: black;
+}
+.main-nav ul{
+  margin: 0;
+}
+.main-nav ul li{
+  margin: 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.main-nav ul li a{
+  color: white;
+}
+
+
 #header {
   margin: 0 0 200px;
   text-align: center;
@@ -34,7 +51,7 @@ a { text-decoration: none; color:rgb(180,30,30);}
 #header .credit {
   visibility: hidden;
   position: absolute;
-  top: 226px;
+  top: 271px;
   left: 6px;
   font-size: 10px;
   color: #fff;

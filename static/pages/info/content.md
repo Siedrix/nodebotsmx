@@ -1,15 +1,16 @@
-## Perfiles
+## Grupo en Meetup
 
-Twitter: [@siedrix](http://twitter.com/siedrix)
+Únete al grupo de Meetup [aquí](http://www.meetup.com/NodeBotsMX/)
 
-Github: http://github.com/siedrix
+## Organizadores
 
-## Projectos
+#### Julio Cesar Rodriguez Dominguez
 
-#### ChelaJs
+- Twitter: [@_Jurasec](https://twitter.com/_Jurasec)
 
-[Chela.js.com](http://chelajs.com)
+#### Siedrix
 
-Una comunidad de developers se reúnen a tomar javascript con el pretexto de hablar del mejor lenguaje hoy en día: cerveza.
+- Twitter: [@siedrix](http://twitter.com/siedrix)
+- Github: http://github.com/siedrix
 
 

@@ -14,7 +14,14 @@
 	<link rel="shortcut icon" href="/img/favicon.png" >
 	<link rel="stylesheet" media="screen" href="/css/main.css" >
 </head>
-<body>	
+<body>
+	<nav class="main-nav">
+		<ul>
+			<li class="title"><a href="/">NodebotsMx</a></li>
+			<li><a href="/contacto">Contacto</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+	</nav>
 	<header id="header">
 		<div class="nodebot">
 			<div class="icon">
@@ -35,7 +42,146 @@
 		<a class="credit" href="https://twitter.com/cwaring">Photo: Chris Waring</a>
 	</header>
 
-	<div class="content">{% block content %}{% endblock %}</div>
+	<div class="content">
+		{% block content %}{% endblock %}
+
+		{% if page.showGlobalInfo %}
+		<h2 id="events">International NodeBots Day</h2>
+		<p><strong>26/27 July 2014</strong> - <a href="https://github.com/nodebots/nodebotsday">Celebrando "NodeBots Day" en este 2014.</a>
+		<br/>Nos uniremos juntos en todo el mundo para crear y aprender.</p>
+		<p>NodeBots Day no es un "hackathon". No habrá premios (pero si alguien quiere patrocinar alguno, es bienvenido :-]) distintos a la satisfacción de hacer algo impresionante!. Vamos a reunirnos, colaborar y hackear. El tema central del NodeBots Day está en compartir y disfrutar de la compañía mutua. Y JavaScript. Un montón de JavaScript.</p>
+		<p>Para mantenerte actualizado sobre este evento, por favor siguenos en twitter <a href="https://twitter.com/NodeBotsMX">@NodeBotsMX</a>,  <a href="https://twitter.com/nodebotsday">@nodebotsday</a>, si quieres ser parte de este evento como patrocinador, contactar vía email a jurasec@gmail.com ó vía twitter @_Jurasec.</p>
+
+		<h2>If you aren't from Mexico, find a meetup near you</h2>
+
+		</div> <!-- close .content, so make can use full width -->
+		<a name="mapa"></a>
+		<div class="map" id="map"></div>
+		<div class="content">
+
+		<ul>
+		<li>
+		<a href="http://nodebotsgt.tumblr.com/">NodeBots Guatemala</a> - Guatemala
+		</li>    
+		<li>
+		<a href="http://nodebotsmed.tumblr.com/">NodeBots Medellín</a> - Colombia
+		</li>
+		<li>
+		<a href="http://www.meetup.com/VillavicencioJS/">NodeBots Villavicencio</a> - Colombia
+		</li>
+		<li>
+		<a href="http://www.meetup.com/NodeBots-of-London">NodeBots of London</a> - UK
+		</li>
+		<li>
+		<a href="http://www.meetup.com/Nodebots-Paris">Les NodeBots de Paris</a> - FR
+		</li>
+		<li>
+		<a href="http://www.meetup.com/nodebots/">NodeBots NYC</a> - USA
+		</li>
+		<li>
+		<a href="http://lanyrd.com/2013/nodebotssf/">NodeBots SF</a> - USA
+		</li>
+		</ul>
+
+		<h2>Iniciando con Node y Johnny-Five</h2>
+		<p>Instalar <a href="http://nodejs.org/">Node.js</a> y descarga el módulo de <a href="https://github.com/rwldrn/johnny-five">johnny-five</a>.
+		Necesitarás una placa Arduino con el sketch de Firmata cargado, lo cual es <a href="http://www.geekytime.net/arduino/como-iniciar-con-arduino-y-johnny-five/">muy fácil de hacer</a>.
+		Después de tener tu Arduino con Firmata correctamente cargado, ya puedes iniciar a hackear tu Arduino como campeón!. NodeBots hace que el proceso de programación del hardware sea muy similiar a la programación de una página web moderna. En serio, es muy fácil!.
+		</p>
+		<script src="https://gist.github.com/voodootikigod/5374512.js"></script>
+		<video controls>
+		<source src="http://dl.dropbox.com/u/3531958/led-strobe.mp4">
+		<source src="http://dl.dropbox.com/u/3531958/led-strobe.ogv">
+		<source src="http://dl.dropbox.com/u/3531958/led-strobe.webm">
+		</video>
+
+		<p></p>
+		<p>Incluso, si no tienes un Arduino a la mano, puedes iniciarte utilizando <a href="https://www.npmjs.org/package/nodebot-workshop">nodebot-workshop</a> el cual, es un módulo de node que te enseña lo básico de Johnny-Five, a través de una serie de retos:
+		<a href="https://www.npmjs.org/package/nodebot-workshop"><img src="https://raw.githubusercontent.com/tableflip/nodebot-workshop/master/screenshot.png" alt=""/></a>
+		</p>
+
+		<h2>¿De dónde viene NodeBots?</h2>
+		<p>
+		El concepto de NodeBots surgió inicialmente con el creciente interés por la creación y manipulación de hardware dentro de la comunidad emprendedora de node js.
+		</p>
+		<p>
+		<a href="http://twitter.com/voodootikigod">Chris Williams</a> es el creador del módulo conocido como node-serialport, el cual permite a los programadores de JS controlar y dirigir el mundo físico. Desde entonces, el hardware ha sido el punto principal de cada conferencia de JS (JSConf), maravillando audiencias con cualquier cosa, desde maquinas de humo (usadas comunmente en los antros) hasta robots que caminan.
+		<strong>Hoy es el momento para que cualquiera pueda iniciarse. Now is time for the rise of JS Robotics.</strong>
+		</p>
+
+		<h2>Nuestros patrocinadores !!!</h2>
+		<p>
+		<a href="http://hacedores.com/"><img src="img/hacedores.png" alt="hacedores.com"/></a>
+		</p>
+		<p>
+		<a href="http://kmmx.mx/"><img src="img/kmmx.png" alt="kmmx.mx"/></a>
+		</p>
+		<p>
+		<a href="http://www.330ohms.com/"><img src="img/330ohms.png" alt="330ohms.com"/></a>
+		</p>
+		<p style="text-align:center">
+		<a href="https://twitter.com/AbrahamOrtiz13">Abraham Ortiz (@AbrahamOrtiz13)</a>
+		</p>
+
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		<script>
+		var map = L.map('map', {
+		scrollWheelZoom: false
+		}).setView([25, 0], 2)
+
+		L.tileLayer("http://{s}tile.stamen.com/toner/{z}/{x}/{y}.png", {
+		"minZoom":      0,
+		"maxZoom":      20,
+		"subdomains":   ["", "a.", "b.", "c.", "d."],
+		"scheme":       "xyz"
+		}).addTo(map)
+
+		var meetups = [
+		//        lat     lng
+		{coords:[  51.49, -0.093], name: "NodeBots of London", url: "http://www.meetup.com/NodeBots-of-London"},
+		{coords:[  40.48, -72.74], name: "NodeBots NYC", url: "http://www.meetup.com/NodeBots-of-London"},
+		{coords:[  30.26, -97.74], name: "NodeBots Austin", url: "https://ti.to/austin-nodebots/nodebots-day-2014"},
+		{coords:[   6.23, -75.57], name: "NodeBots Medellín", url: "http://nodebotsmed.tumblr.com/"},
+		{coords:[ -33.92,  18.42], name: "NodeBots Cape Town", url: "https://twitter.com/nodebotscpt"},
+		{coords:[ -27.47, 153.02], name: "NodeBots Brisbane", url: "http://www.eventbrite.com.au/e/brisbanes-international-nodebots-day-tickets-12120977169"},
+		{coords:[  37.77,-122.41], name: "NodeBots SF", url:"http://lanyrd.com/2013/nodebotssf/"},
+		{coords:[  36.85, -76.28], name: "Norfolk.js", url:"http://www.meetup.com/NorfolkJS/events/187172562/"},
+		{coords:[  29.76, -95.36], name: "NodeBots Houston, TX", url:"https://ti.to/houstonjs/nodebotsday"},
+		{coords:[  36.16,-115.13], name: "NodeBotsLas Vegas, MV (Meowada)", url:""},
+		{coords:[  25.78, -80.20], name: "NodeBots Miami/Fort Lauderdale, FL", url:"http://www.meetup.com/NodeJS-Enthusiasts-SE-Florida/events/182676152"},
+		{coords:[  45.52,-122.67], name: "PDXNode, Portland, OR", url:"http://www.pdxnode.org/"},
+		{coords:[  33.44,-112.07], name: "NodeBots Phoenix/Mesa, AZ", url:""},
+		{coords:[  42.35, -71.05], name: "NodeBots Boston", url:"https://ti.to/bocoup/nodebotsday-2014"},
+		{coords:[  38.90, -77.03], name: "NodeBots DC", url:"https://ti.to/nodebots-dc/nodebots-day-2014"},
+		{coords:[  45.42, -75.69], name: "Ottawa.js, ON", url:"https://github.com/ottawajs/nodebots"},
+		{coords:[  15.78, -90.23], name: "NodeBots Guatemala, GT", url:"http://nodebotsgt.tumblr.com/"},
+		{coords:[   4.59, -74.07], name: "NodeBots Bogotá, CO", url:""},
+		{coords:[ -23.55, -46.63], name: "NodeBots São Paulo, SP", url:""},
+		{coords:[  19.4130738, -99.1653507], name: "NodeBots Distrito Federal, México", url:""},
+		{coords:[  48.85,   2.35], name: "Les NodeBots de Paris", url:"http://www.meetup.com/Nodebots-Paris"},
+		{coords:[ -37.81, 144.96], name: "NodeBots Melbourne, Australia", url:"http://www.eventbrite.com.au/e/nodebots-day-melbourne-july-2014-tickets-12121105553"},
+		{coords:[ -33.86, 151.20], name: "NodeBots Sydney, Australia", url:"https://ti.to/nbdau/nodebots-sydney-2014"},
+		{coords:[   4.15, -73.63], name: "NodeBots Villavicencio", url:"http://www.meetup.com/VillavicencioJS/"}
+		]
+
+		meetups.map(function (m) {
+		//    var marker = L.marker(m.coords)
+		var marker = L.circleMarker(m.coords, {
+		radius:12,
+		weight:1,
+		color: '#000',
+		fillColor: '#F8E01E',
+		fillOpacity: 0.8
+		})
+		var text = m.url ? '<a href="' + m.url + '">' + m.name + '</a>' : m.name
+		marker.bindPopup(text)
+		map.addLayer(marker)
+		return marker
+		})
+		</script>
+		{% endif %}
+	</div>
 
 	<footer id="footer">
 		<div class="badges">

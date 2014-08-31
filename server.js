@@ -17,9 +17,9 @@ var blog = new Paperpress({
 
 blog.attach(server);
 
-server.get('/', function (req, res) {
-	res.sendfile('./views/home.html');
-});
+// server.get('/', function (req, res) {
+// 	res.sendfile('./views/home.html');
+// });
 
 server.get('/feed', function (req, res) {
 	res.redirect('/rss');
